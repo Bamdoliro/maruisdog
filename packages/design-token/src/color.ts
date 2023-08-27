@@ -1,13 +1,16 @@
 const color: Record<string, string> = {
+  // system
   black: "#000000",
   white: "#FFFFFF",
   red: "#F44336",
 
+  // primary
   maruDefault: "#257CFF",
   maruHigh: "#3081FF",
   maruRow: "#0C57CB",
   maruHoverd: "#186EEE",
 
+  // gray scale
   gray50: "#FAFAFB",
   gray100: "#F8F8F9",
   gray200: "#EEF0F2",
