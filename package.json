@@ -8,6 +8,7 @@
   },
   "devDependencies": {
     "eslint": "^8.47.0",
+    "eslint-config-custom": "workspace:*",
     "prettier": "^3.0.2",
     "tsconfig": "workspace:*",
     "turbo": "latest"
