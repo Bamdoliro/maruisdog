@@ -1,0 +1,14 @@
+{
+  "name": "@maru/design-token",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/styled-components": "^5.1.26",
+    "styled-components": "^6.0.7",
+    "typescript": "^5.2.2"
+  }
+}
