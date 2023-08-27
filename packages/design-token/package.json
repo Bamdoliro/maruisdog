@@ -1,13 +1,11 @@
 {
   "name": "@maru/design-token",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@types/styled-components": "^5.1.26",
     "styled-components": "^6.0.7",

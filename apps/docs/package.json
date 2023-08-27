@@ -21,5 +21,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "storybook": "^7.3.2"
+  },
+  "dependencies": {
+    "@maru/design-token": "workspace:*"
   }
 }
