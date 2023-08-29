@@ -7,8 +7,11 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@types/styled-components": "^5.1.26",
-    "styled-components": "^6.0.7",
+    "@emotion/react": "^11.11.1",
+    "@types/react": "^18.2.21",
     "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "react": "^18.2.0"
   }
 }
