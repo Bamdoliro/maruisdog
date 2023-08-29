@@ -4,7 +4,7 @@ import styled, { css } from "styled-components";
 
 type Font = keyof typeof font;
 
-interface TextProps extends HTMLAttributes<HTMLSpanElement> {
+export interface TextProps extends HTMLAttributes<HTMLSpanElement> {
   children: ReactNode;
   color?: string;
   fontType: Font;
@@ -13,14 +13,14 @@ interface TextProps extends HTMLAttributes<HTMLSpanElement> {
   ellipsis?: boolean;
 }
 
-const Text = ({
+export const Text = ({
   children,
   color,
   fontType,
   textAlign,
   width,
   ellipsis = false,
-  ...args
+  ...props
 }: TextProps) => {
   return (
     <StyledText
@@ -29,14 +29,12 @@ const Text = ({
       width={width}
       fontType={fontType}
       ellipsis={ellipsis}
-      {...args}
+      {...props}
     >
       {children}
     </StyledText>
   );
 };
-
-export default Text;
 
 const StyledText = styled.p<TextProps>`
   ${({ fontType }) => font[fontType]}
