@@ -4,7 +4,7 @@ import styled, { css } from "styled-components";
 
 type Font = keyof typeof font;
 
-interface Props extends HTMLAttributes<HTMLSpanElement> {
+interface TextProps extends HTMLAttributes<HTMLSpanElement> {
   children: ReactNode;
   color?: string;
   fontType: Font;
@@ -20,12 +20,16 @@ const Text = ({
   textAlign,
   width,
   ellipsis = false,
-}: Props) => {
+  ...args
+}: TextProps) => {
   return (
     <StyledText
-      style={{ color, textAlign, width }}
+      color={color}
+      textAlign={textAlign}
+      width={width}
       fontType={fontType}
       ellipsis={ellipsis}
+      {...args}
     >
       {children}
     </StyledText>
@@ -34,13 +38,16 @@ const Text = ({
 
 export default Text;
 
-const StyledText = styled.p<{ fontType: Font; ellipsis: boolean }>`
+const StyledText = styled.p<TextProps>`
   ${({ fontType }) => font[fontType]}
-  ${(props) =>
-    props.ellipsis &&
+  width: ${({ width }) => width};
+  text-align: ${({ textAlign }) => textAlign};
+  color: ${({ color }) => color};
+  ${({ ellipsis }) =>
+    ellipsis &&
     css`
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-    `}
+    `};
 `;
