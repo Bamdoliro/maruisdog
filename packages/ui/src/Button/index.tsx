@@ -9,7 +9,7 @@ import {
 } from "./Button.style";
 import { ButtonIcon, ButtonOption, ButtonSize } from "./Button.type";
 
-interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   option?: ButtonOption;
   icon?: ButtonIcon;
@@ -17,22 +17,21 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   width?: CSSProperties["width"];
 }
 
-const Button = ({
+export const Button = ({
   onClick,
   children,
   option = "PRIMARY",
   icon = "NONE",
   size = "MEDIUM",
   width,
-  style,
-}: Props) => {
+}: ButtonProps) => {
   return (
     <StyledButton
-      style={{ width, ...style }}
       onClick={onClick}
       option={option}
       icon={icon}
       size={size}
+      width={width}
     >
       {icon === "ADD_ICON" && (
         <IconAdd color={color.white} width={24} height={24} />
@@ -45,20 +44,14 @@ const Button = ({
   );
 };
 
-export default Button;
-
-const StyledButton = styled.button<{
-  option: ButtonOption;
-  icon: ButtonIcon;
-  size: ButtonSize;
-}>`
+const StyledButton = styled.button<ButtonProps>`
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 6px;
   cursor: pointer;
-
-  ${(props) => props.icon && getButtonPadding[props.icon]};
-  ${(props) => props && getButtonStyle[props.option]};
-  ${(props) => props && getButtonSize[props.size]};
+  width: ${({ width }) => width};
+  ${({ icon }) => icon && getButtonPadding[icon]};
+  ${({ option }) => option && getButtonStyle[option]};
+  ${({ size }) => size && getButtonSize[size]};
 `;
