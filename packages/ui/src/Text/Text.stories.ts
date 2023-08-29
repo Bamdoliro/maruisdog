@@ -1,6 +1,6 @@
 import { color } from "@maru/design-token";
 import { Meta, StoryObj } from "@storybook/react";
-import { Text, TextProps } from "../Text";
+import { Text, TextProps } from ".";
 
 const meta: Meta<TextProps> = {
   title: "Components/Text",
