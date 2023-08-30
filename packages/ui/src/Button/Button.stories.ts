@@ -10,31 +10,61 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Large: Story = {
-  args: {
-    children: "Button",
-    size: "LARGE",
-    onClick: () => console.log("clicked!!"),
-  },
-};
-
-export const Medium: Story = {
+export const Default: Story = {
   args: {
     children: "Button",
     size: "MEDIUM",
+    option: "PRIMARY",
     onClick: () => console.log("clicked!!"),
   },
 };
 
-export const Small: Story = {
+export const Secondary: Story = {
   args: {
     children: "Button",
-    size: "SMALL",
+    size: "MEDIUM",
+    option: "SECONDARY",
     onClick: () => console.log("clicked!!"),
   },
 };
 
-export const AddIcon: Story = {
+export const Quaternary: Story = {
+  args: {
+    children: "Button",
+    size: "MEDIUM",
+    option: "QUATERNARY",
+    onClick: () => console.log("clicked!!"),
+  },
+};
+
+export const Tertiary: Story = {
+  args: {
+    children: "Button",
+    size: "MEDIUM",
+    option: "TERTIARY",
+    onClick: () => console.log("clicked!!"),
+  },
+};
+
+export const Disabled: Story = {
+  args: {
+    children: "Button",
+    size: "MEDIUM",
+    option: "DISABLED",
+    onClick: () => console.log("clicked!!"),
+  },
+};
+
+export const Delete: Story = {
+  args: {
+    children: "Button",
+    size: "MEDIUM",
+    option: "DELETE",
+    onClick: () => console.log("clicked!!"),
+  },
+};
+
+export const Add: Story = {
   args: {
     children: "Button",
     size: "MEDIUM",
@@ -43,7 +73,7 @@ export const AddIcon: Story = {
   },
 };
 
-export const ShortcutsIcon: Story = {
+export const Shortcuts: Story = {
   args: {
     children: "Button",
     size: "MEDIUM",
