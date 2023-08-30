@@ -1,5 +1,5 @@
-import styled from "@emotion/styled";
 import { color } from "@maru/design-token";
+import { styled } from "styled-components";
 import { IconSearch } from "../assets";
 import { StyledInputProps } from "./Input.type";
 

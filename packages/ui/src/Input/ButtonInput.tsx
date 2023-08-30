@@ -1,5 +1,5 @@
-import styled from "@emotion/styled";
 import { color, font } from "@maru/design-token";
+import { styled } from "styled-components";
 import Input from "./DefaultInput";
 import { StyledInputProps } from "./Input.type";
 

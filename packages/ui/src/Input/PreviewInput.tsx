@@ -1,7 +1,6 @@
-import { css } from "@emotion/react";
-import styled from "@emotion/styled";
 import { color, font } from "@maru/design-token";
 import { useState } from "react";
+import { css, styled } from "styled-components";
 import { IconInvisibleEye, IconVisibleEye } from "../assets";
 import ConditionalMessage from "./ConditionalMessage";
 import { StyledInputProps } from "./Input.type";

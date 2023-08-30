@@ -1,6 +1,5 @@
-import { css } from "@emotion/react";
-import styled from "@emotion/styled";
 import { color, font } from "@maru/design-token";
+import { css, styled } from "styled-components";
 import { IconError } from "../assets";
 import ConditionalMessage from "./ConditionalMessage";
 import { StyledInputProps } from "./Input.type";
