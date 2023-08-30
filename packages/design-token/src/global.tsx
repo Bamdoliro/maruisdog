@@ -1,8 +1,10 @@
-import { css, Global } from "@emotion/react";
+import { createGlobalStyle } from "styled-components";
 import color from "./color";
-import { ResetCSS } from "./reset";
+import reset from "./reset";
 
-const globalStyle = css`
+const GlobalStyle = createGlobalStyle`
+  ${reset}
+
   * {
     box-sizing: border-box;
     margin: 0;
@@ -57,11 +59,4 @@ const globalStyle = css`
   }
 `;
 
-export const GlobalStyle = () => {
-  return (
-    <>
-      <Global styles={ResetCSS} />
-      <Global styles={globalStyle} />
-    </>
-  );
-};
+export default GlobalStyle;
