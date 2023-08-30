@@ -1,6 +1,6 @@
 import { css } from "styled-components";
 
-const ResetCSS = css`
+const reset = css`
   html,
   body,
   div,
@@ -127,4 +127,4 @@ const ResetCSS = css`
   }
 `;
 
-export default ResetCSS;
+export default reset;
