@@ -6,18 +6,15 @@ import ConditionalMessage from "./ConditionalMessage";
 import { StyledInputProps } from "./Input.type";
 
 const DefaultInput = ({
-  width = 320,
-  label,
-  placeholder,
+  width = "320px",
   type = "text",
-  name,
-  value,
+  isError = false,
+  label,
   onChange,
+  textAlign,
   errorMessage,
   message,
-  readOnly,
-  textAlign,
-  isError = false,
+  ...props
 }: StyledInputProps) => {
   return (
     <div style={{ width }}>
@@ -25,13 +22,10 @@ const DefaultInput = ({
       <div style={{ position: "relative" }}>
         <StyledDefaultInput
           onChange={onChange}
-          placeholder={placeholder}
           type={type}
-          name={name}
-          value={value}
-          readOnly={readOnly}
-          style={{ textAlign }}
-          $isError={isError}
+          textAlign={textAlign}
+          isError={isError}
+          {...props}
         />
         {isError && (
           <IconError
@@ -57,7 +51,7 @@ const DefaultInput = ({
 
 export default DefaultInput;
 
-const StyledDefaultInput = styled.input<{ $isError: boolean }>`
+const StyledDefaultInput = styled.input<StyledInputProps>`
   ${font.p2}
   color: ${color.gray800};
   height: 48px;
@@ -75,8 +69,9 @@ const StyledDefaultInput = styled.input<{ $isError: boolean }>`
     outline: 2px solid rgba(20, 112, 255, 0.25);
   }
 
-  ${(props) =>
-    props.$isError &&
+  text-align: ${({ textAlign }) => textAlign};
+  ${({ isError }) =>
+    isError &&
     css`
       border: 1px solid ${color.red};
       outline: 2px solid rgba(244, 67, 54, 0.25);

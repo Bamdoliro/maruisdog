@@ -4,40 +4,32 @@ import { IconSearch } from "../assets";
 import { StyledInputProps } from "./Input.type";
 
 const SearchInput = ({
-  width = 320,
-  placeholder,
+  width = "320px",
   type = "text",
-  name,
-  value,
   onChange,
+  ...props
 }: StyledInputProps) => {
   return (
-    <StyledSearchInput>
+    <StyledSearchInput width={width}>
       <IconSearch
         color={color.gray400}
         width={24}
         height={24}
         cursor="pointer"
       />
-      <Input
-        style={{ width }}
-        onChange={onChange}
-        placeholder={placeholder}
-        type={type}
-        name={name}
-        value={value}
-      />
+      <Input onChange={onChange} type={type} {...props} />
     </StyledSearchInput>
   );
 };
 
 export default SearchInput;
 
-const StyledSearchInput = styled.div`
+const StyledSearchInput = styled.div<StyledInputProps>`
   display: flex;
   align-items: center;
   gap: 4px;
   height: 40px;
+  width: ${({ width }) => width};
   padding: 10px 8px;
   background-color: ${color.white};
   border: 1px solid ${color.gray400};

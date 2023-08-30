@@ -6,7 +6,7 @@ import { StyledInputProps } from "./Input.type";
 
 const NumberInput = ({
   name,
-  width = 80,
+  width = "80px",
   textAlign = "center",
   onChange,
   placeholder,
@@ -25,13 +25,14 @@ const NumberInput = ({
     <StyledNumberInput
       ref={numberInputRef}
       name={name}
-      style={{ width, textAlign }}
+      width={width}
+      textAlign={textAlign}
       onChange={onChange}
       onClick={handleSelectAllClick}
       type="number"
       value={value}
       placeholder={placeholder}
-      $isError={isError}
+      isError={isError}
       min={0}
     />
   );
@@ -39,7 +40,7 @@ const NumberInput = ({
 
 export default NumberInput;
 
-const StyledNumberInput = styled.input<{ $isError: boolean }>`
+const StyledNumberInput = styled.input<StyledInputProps>`
   ${font.p2}
   height: 40px;
   border-radius: 6px;
@@ -61,9 +62,10 @@ const StyledNumberInput = styled.input<{ $isError: boolean }>`
     -webkit-appearance: none;
     margin: 0;
   }
-
-  ${(props) =>
-    props.$isError &&
+  width: ${({ width }) => width};
+  text-align: ${({ textAlign }) => textAlign};
+  ${({ isError }) =>
+    isError &&
     css`
       border: 1px solid ${color.red};
       outline: 2px solid rgba(244, 67, 54, 0.25);

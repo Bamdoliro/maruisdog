@@ -6,9 +6,9 @@ import styled, { css } from "styled-components";
 import Row from "../Flex/Row";
 import Text from "../Text/Text";
 import ConditionalMessage from "./ConditionalMessage";
-import { InputProps } from "./Input.type";
+import { StyledInputProps } from "./Input.type";
 
-interface TimeLimitInputProps extends InputProps {
+interface TimeLimitInputProps extends StyledInputProps {
   timerTime: number;
   setTimerTime: Dispatch<SetStateAction<number>>;
   buttonText: string;

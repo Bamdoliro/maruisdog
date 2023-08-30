@@ -4,7 +4,7 @@ import NumberInput from "./NumberInput";
 import PreviewInput from "./PreviewInput";
 import SearchInput from "./SearchInput";
 
-interface InputProps extends StyledInputProps {
+export interface InputProps extends StyledInputProps {
   option: InputOption;
 }
 

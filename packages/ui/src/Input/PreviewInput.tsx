@@ -7,15 +7,13 @@ import ConditionalMessage from "./ConditionalMessage";
 import { StyledInputProps } from "./Input.type";
 
 const PreviewInput = ({
-  width = 320,
-  placeholder,
-  name,
+  width = "320px",
   label,
-  value,
   errorMessage,
   message,
   isError = false,
   onChange,
+  ...props
 }: StyledInputProps) => {
   const [isPreview, setIsPreview] = useState(false);
 
@@ -28,10 +26,8 @@ const PreviewInput = ({
         <StyledPreviewInput isError={isError}>
           <Input
             onChange={onChange}
-            placeholder={placeholder}
             type={isPreview ? "text" : "password"}
-            name={name}
-            value={value}
+            {...props}
           />
           {isPreview ? (
             <IconVisibleEye
