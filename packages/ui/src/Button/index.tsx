@@ -1,6 +1,6 @@
-import styled from "@emotion/styled";
 import { color } from "@maru/design-token";
 import { ButtonHTMLAttributes, CSSProperties, ReactNode } from "react";
+import { styled } from "styled-components";
 import { IconAdd, IconShortcuts } from "../assets";
 import {
   getButtonPadding,

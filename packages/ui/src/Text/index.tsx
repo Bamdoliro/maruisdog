@@ -1,7 +1,6 @@
-import { css } from "@emotion/react";
-import styled from "@emotion/styled";
 import { font } from "@maru/design-token";
 import { CSSProperties, HTMLAttributes, ReactNode } from "react";
+import { css, styled } from "styled-components";
 
 type Font = keyof typeof font;
 

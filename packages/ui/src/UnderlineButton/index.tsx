@@ -1,7 +1,6 @@
-import { css } from "@emotion/react";
-import styled from "@emotion/styled";
 import { color, font } from "@maru/design-token";
 import { ButtonHTMLAttributes, ReactNode } from "react";
+import { css, styled } from "styled-components";
 
 export interface UnderlineButtonProps
   extends ButtonHTMLAttributes<HTMLButtonElement> {
