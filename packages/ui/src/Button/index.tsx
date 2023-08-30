@@ -15,6 +15,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   icon?: ButtonIcon;
   size?: ButtonSize;
   width?: CSSProperties["width"];
+  active?: boolean;
 }
 
 export const Button = ({
