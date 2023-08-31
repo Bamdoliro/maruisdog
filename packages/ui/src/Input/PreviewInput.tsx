@@ -6,7 +6,7 @@ import { IconInvisibleEye, IconVisibleEye } from "../assets";
 import ConditionalMessage from "./ConditionalMessage";
 import { StyledInputProps } from "./Input.type";
 
-const PreviewInput = ({
+export const PreviewInput = ({
   width = "320px",
   label,
   errorMessage,
@@ -56,8 +56,6 @@ const PreviewInput = ({
     </div>
   );
 };
-
-export default PreviewInput;
 
 const StyledPreviewInput = styled.div<StyledInputProps>`
   ${flex({ alignItems: "center", justifyContent: "space-between" })}

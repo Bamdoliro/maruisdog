@@ -1,8 +1,8 @@
-import DefaultInput from "./DefaultInput";
+import { DefaultInput } from "./DefaultInput";
 import { InputOption, StyledInputProps } from "./Input.type";
-import NumberInput from "./NumberInput";
-import PreviewInput from "./PreviewInput";
-import SearchInput from "./SearchInput";
+import { NumberInput } from "./NumberInput";
+import { PreviewInput } from "./PreviewInput";
+import { SearchInput } from "./SearchInput";
 
 export interface InputProps extends StyledInputProps {
   option: InputOption;

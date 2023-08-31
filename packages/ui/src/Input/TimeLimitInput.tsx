@@ -8,7 +8,7 @@ import Text from "../Text/Text";
 import ConditionalMessage from "./ConditionalMessage";
 import { StyledInputProps } from "./Input.type";
 
-interface TimeLimitInputProps extends StyledInputProps {
+export interface TimeLimitInputProps extends StyledInputProps {
   timerTime: number;
   setTimerTime: Dispatch<SetStateAction<number>>;
   buttonText: string;
@@ -16,7 +16,7 @@ interface TimeLimitInputProps extends StyledInputProps {
   onClick: () => void;
 }
 
-const TimeLimitInput = ({
+export const TimeLimitInput = ({
   width = 320,
   name,
   label,
@@ -65,8 +65,6 @@ const TimeLimitInput = ({
     </div>
   );
 };
-
-export default TimeLimitInput;
 
 const StyledTimeLimitInput = styled.div<{ $isError: boolean }>`
   ${flex({ alignItems: "center", justifyContent: "center" })}

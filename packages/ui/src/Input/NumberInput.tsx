@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { css, styled } from "styled-components";
 import { StyledInputProps } from "./Input.type";
 
-const NumberInput = ({
+export const NumberInput = ({
   name,
   width = "80px",
   textAlign = "center",
@@ -36,8 +36,6 @@ const NumberInput = ({
     />
   );
 };
-
-export default NumberInput;
 
 const StyledNumberInput = styled.input<StyledInputProps>`
   ${font.p2}
