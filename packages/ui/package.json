@@ -10,6 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "@maru/design-token": "workspace:*",
+    "@maru/utils": "workspace:*",
     "react": "^18.2.0"
   },
   "devDependencies": {

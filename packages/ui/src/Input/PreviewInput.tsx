@@ -1,4 +1,5 @@
 import { color, font } from "@maru/design-token";
+import { flex } from "@maru/utils";
 import { useState } from "react";
 import { css, styled } from "styled-components";
 import { IconInvisibleEye, IconVisibleEye } from "../assets";
@@ -59,9 +60,7 @@ const PreviewInput = ({
 export default PreviewInput;
 
 const StyledPreviewInput = styled.div<StyledInputProps>`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  ${flex({ alignItems: "center", justifyContent: "space-between" })}
   gap: 10px;
   height: 48px;
   padding: 10px 16px;
