@@ -5,14 +5,16 @@ interface Props {
   flexDirection?: CSSProperties["flexDirection"];
   justifyContent?: CSSProperties["justifyContent"];
   alignItems?: CSSProperties["alignItems"];
+  gap?: CSSProperties["gap"];
 }
 
-const flex = ({ flexDirection, justifyContent, alignItems }: Props) => {
+const flex = ({ flexDirection, justifyContent, alignItems, gap }: Props) => {
   return css`
     display: flex;
     flex-direction: ${flexDirection};
     justify-content: ${justifyContent};
     align-items: ${alignItems};
+    gap: ${gap};
   `;
 };
 
