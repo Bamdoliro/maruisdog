@@ -11,6 +11,7 @@
   "dependencies": {
     "@maru/design-token": "workspace:*",
     "@maru/utils": "workspace:*",
+    "@maru/hooks": "workspace:*",
     "react": "^18.2.0"
   },
   "devDependencies": {
