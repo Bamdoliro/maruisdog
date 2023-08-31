@@ -4,7 +4,7 @@ import { styled } from "styled-components";
 import { IconSearch } from "../assets";
 import { StyledInputProps } from "./Input.type";
 
-const SearchInput = ({
+export const SearchInput = ({
   width = "320px",
   type = "text",
   onChange,
@@ -22,8 +22,6 @@ const SearchInput = ({
     </StyledSearchInput>
   );
 };
-
-export default SearchInput;
 
 const StyledSearchInput = styled.div<StyledInputProps>`
   ${flex({ alignItems: "center" })}

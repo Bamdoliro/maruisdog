@@ -1,17 +1,17 @@
 import { color, font } from "@maru/design-token";
 import { css, styled } from "styled-components";
 
-interface Props {
+interface ConditionalMessageProps {
   message?: string;
   errorMessage?: string;
   isError?: boolean;
 }
 
-const ConditionalMessage = ({
+export const ConditionalMessage = ({
   message,
   errorMessage,
   isError = false,
-}: Props) => {
+}: ConditionalMessageProps) => {
   return isError ? (
     errorMessage ? (
       <div style={{ position: "relative" }}>

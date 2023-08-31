@@ -4,7 +4,7 @@ import { IconError } from "../assets";
 import ConditionalMessage from "./ConditionalMessage";
 import { StyledInputProps } from "./Input.type";
 
-const DefaultInput = ({
+export const DefaultInput = ({
   width = "320px",
   type = "text",
   isError = false,
@@ -47,8 +47,6 @@ const DefaultInput = ({
     </div>
   );
 };
-
-export default DefaultInput;
 
 const StyledDefaultInput = styled.input<StyledInputProps>`
   ${font.p2}
