@@ -2,7 +2,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { ButtonInput, ButtonInputProps } from ".";
 
 const meta: Meta<ButtonInputProps> = {
-  title: "Components/ButtonInput",
+  title: "Components/Button",
   component: ButtonInput,
 } as Meta<ButtonInputProps>;
 
@@ -10,7 +10,7 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
+export const Button: Story = {
   args: {
     label: "Label",
     buttonText: "Button",

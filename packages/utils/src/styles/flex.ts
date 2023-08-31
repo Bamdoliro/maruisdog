@@ -8,7 +8,12 @@ interface Props {
   gap?: CSSProperties["gap"];
 }
 
-const flex = ({ flexDirection, justifyContent, alignItems, gap }: Props) => {
+const flex = ({
+  flexDirection = "row",
+  justifyContent,
+  alignItems,
+  gap,
+}: Props) => {
   return css`
     display: flex;
     flex-direction: ${flexDirection};

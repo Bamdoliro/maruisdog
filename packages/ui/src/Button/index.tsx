@@ -1,4 +1,5 @@
 import { color } from "@maru/design-token";
+import { flex } from "@maru/utils";
 import { ButtonHTMLAttributes, CSSProperties, ReactNode } from "react";
 import { styled } from "styled-components";
 import { IconAdd, IconShortcuts } from "../assets";
@@ -46,6 +47,7 @@ export const Button = ({
 };
 
 const StyledButton = styled.button<ButtonProps>`
+  ${flex({ justifyContent: "center", alignItems: "center" })}
   border-radius: 6px;
   cursor: pointer;
   width: ${({ width }) => width};
