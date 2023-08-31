@@ -46,9 +46,6 @@ export const Button = ({
 };
 
 const StyledButton = styled.button<ButtonProps>`
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border-radius: 6px;
   cursor: pointer;
   width: ${({ width }) => width};
