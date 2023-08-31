@@ -16,5 +16,6 @@ export const Default: Story = {
     placeholder: "This is Input",
     buttonText: "Button",
     onClick: () => console.log("clicked!!"),
+    timerTime: 0,
   },
 };
