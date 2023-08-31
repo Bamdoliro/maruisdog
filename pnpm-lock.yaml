@@ -51,11 +51,24 @@ importers:
         specifier: ^5.2.2
         version: 5.2.2
 
+  packages/hooks:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+    devDependencies:
+      '@types/react':
+        specifier: ^18.2.21
+        version: 18.2.21
+
   packages/ui:
     dependencies:
       '@maru/design-token':
         specifier: workspace:*
         version: link:../design-token
+      '@maru/hooks':
+        specifier: workspace:*
+        version: link:../hooks
       '@maru/utils':
         specifier: workspace:*
         version: link:../utils

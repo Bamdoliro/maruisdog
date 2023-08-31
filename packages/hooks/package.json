@@ -1,0 +1,15 @@
+{
+  "name": "@maru/hooks",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^18.2.21"
+  },
+  "dependencies": {
+    "react": "^18.2.0"
+  }
+}
